@@ -1,0 +1,15 @@
+.posts__item{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(36, 35, 35);
+    list-style-type: none;
+    color: white;
+    text-align: center;
+    height: 90px;
+}
+.posts__item:hover{
+    background-color: #da3d04e3;
+}
+.posts__item_title{
+    padding-top: 15px;
+}
