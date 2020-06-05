@@ -1,0 +1,24 @@
+.users{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.users__user{
+    display: flex;
+    padding: 15px;
+    border: 1px solid rgb(200, 199, 199);
+    border-bottom: none;
+}
+.users__user:last-child{
+    border-bottom: 1px solid rgb(200, 199, 199);
+}
+.users__user_img{
+    margin-right: 10px;
+}
+
+.users__user_img_radius{
+    border-radius: 25px;
+}
+.users__user_info>p{
+    margin: 0px;
+}
