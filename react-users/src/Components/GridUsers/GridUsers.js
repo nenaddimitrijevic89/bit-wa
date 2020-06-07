@@ -9,6 +9,7 @@ const GridUsers=()=>{
             {data.results.map((user, i)=>
                 <GridUser
                 key={i}
+                gender={user.gender}
                 img={user.picture.large}
                 name={user.name.first}
                 email={user.email}

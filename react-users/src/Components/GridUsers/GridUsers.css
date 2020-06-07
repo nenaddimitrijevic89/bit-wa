@@ -11,7 +11,6 @@
     width: 300px;
     margin-bottom: 15px;
     position: relative;
-    border: 1px solid grey;
     border-radius: 10px;
     background-color: #e4dad9;
     margin-top: 15px;
@@ -46,4 +45,10 @@
 
 .gridUsers__users_info span {
     font-weight: bold;
+}
+
+.gridUsers__user_gender {
+    position: absolute;
+    color: white;
+    right: 15px;
 }
