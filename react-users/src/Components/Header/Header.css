@@ -1,10 +1,12 @@
-.nav{
+.nav {
     margin-bottom: 10px;
     background-color: rgb(204, 32, 32);
     height: 50px;
     text-align: center;
+    margin-top: -20px;
 }
-.nav__title{
+
+.nav__title {
     padding-top: 10px;
     color: white;
 }

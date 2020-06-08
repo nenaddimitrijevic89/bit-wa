@@ -1,0 +1,54 @@
+.gridUsers {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.gridUsers__user {
+    width: 300px;
+    margin-bottom: 15px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e4dad9;
+    margin-top: 15px;
+}
+
+.gridUsers__user:hover {
+    background-color: #cc2020;
+    color: white;
+}
+
+.gridUsers__user_img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.gridUsers__user_name {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    bottom: 70px;
+    width: 290px;
+    height: 41px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.gridUsers__users_info {
+    padding-left: 10px;
+    border-top: none;
+}
+
+.gridUsers__users_info span {
+    font-weight: bold;
+}
+
+.gridUsers__user_gender {
+    position: absolute;
+    color: white;
+    right: 15px;
+}
