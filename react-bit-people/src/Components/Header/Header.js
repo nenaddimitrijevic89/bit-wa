@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import './Header.css';
-// import { FaList } from 'react-icons/fa'
-// import { BsGrid1X2Fill } from 'react-icons/bs';
+
 
 const Header = ({ isList, onLayoutChange }) => {
     return (
@@ -18,8 +16,6 @@ const Header = ({ isList, onLayoutChange }) => {
                 {isList
                 ?<i className="fa fa-list" onClick={onLayoutChange}></i>
                 :<i className="fa fa-th-large" onClick={onLayoutChange}></i>
-                    // ? <FaList onClick={onLayoutChange} className="whiteIcons" />
-                    // : <BsGrid1X2Fill onClick={onLayoutChange} className="whiteIcons" />
                 }
             </div>
         </nav>

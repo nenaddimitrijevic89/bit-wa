@@ -1,15 +1,9 @@
 import React from 'react';
 import './ListUser.css';
 import { hideEmail } from '../../Functions/functions';
-import { MdEmail } from 'react-icons/md';
-import { FaBirthdayCake } from 'react-icons/fa';
 
 const ListUser = ({ dob, img, name, email, last, gender }) => {
-    if (gender === "female") {
-        let female = "female"
-    } else {
-        female = ""
-    }
+    
     const dateOfBirth = new Date(dob);
     const y = dateOfBirth.getFullYear();
     const m = dateOfBirth.getMonth() + 1;
@@ -21,8 +15,8 @@ const ListUser = ({ dob, img, name, email, last, gender }) => {
             </div>
             <div className="users__user_info">
                 <p><span> {name} {last}</span></p>
-                <p><MdEmail /> email:<span> {hideEmail(email)}</span></p>
-                <p><FaBirthdayCake /> date of birth:<span> {`${d}-${m}-${y}`}</span></p>
+                <p><i className="fa fa-envelope"></i> email:<span> {hideEmail(email)}</span></p>
+                <p><i className="fa fa-birthday-cake"></i> date of birth:<span> {`${d}-${m}-${y}`}</span></p>
             </div>
         </div>
     )

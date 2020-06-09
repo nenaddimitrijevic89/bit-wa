@@ -16,26 +16,32 @@
     padding-top: 10px;
     color: white;
 }
-.active{
-    display:block;
+
+.active {
+    display: block;
 }
-.none{
+
+.none {
     display: none;
 }
-.whiteIcons{
+
+.whiteIcons {
     color: white;
     height: 20px;
     width: 30px;
 }
-#listOrGrid{
+
+#listOrGrid {
     width: 30px;
-    height:25px;
+    height: 25px;
 }
-#listOrGrid>i{
-    color:white;
+
+#listOrGrid>i {
+    color: white;
     font-size: 30px;
 }
-.nav>i{
-    color:white;
+
+.nav>i {
+    color: white;
     font-size: 30px;
 }
