@@ -1,0 +1,10 @@
+.post{
+    width: 90%;
+    margin: 15px auto;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+.post__info>span{
+    padding-right:15px;
+    padding-top: 10px;
+}
