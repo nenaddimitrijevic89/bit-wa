@@ -1,10 +1,26 @@
-.post{
+.post {
     width: 90%;
     margin: 15px auto;
     border-bottom: 1px solid grey;
     padding-bottom: 10px;
 }
-.post__info>span{
-    padding-right:15px;
+
+.post:hover {
+    box-shadow: 7px 8px 6px rgb(180, 179, 179);
+}
+
+.post__info>span {
+    padding-right: 15px;
     padding-top: 10px;
+}
+
+.post__title {
+    margin-bottom: 20px;
+}
+
+.post__info_comments {
+    background-color: #bc2800;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
 }

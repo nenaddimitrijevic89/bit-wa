@@ -1,7 +1,8 @@
-.header{
-    background-color: red;
-    color: white;
+.header {
+    background-color: #311b00;
+    color: #ffdb98;
 }
-.header__title{
+
+.header__title {
     padding: 15px;
 }
