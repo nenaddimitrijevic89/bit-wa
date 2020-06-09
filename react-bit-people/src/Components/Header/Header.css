@@ -1,0 +1,41 @@
+.nav {
+    margin-bottom: 10px;
+    background-color: rgb(204, 32, 32);
+    height: 70px;
+    text-align: center;
+    margin-top: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.nav__title {
+    padding-top: 10px;
+    color: white;
+}
+.active{
+    display:block;
+}
+.none{
+    display: none;
+}
+.whiteIcons{
+    color: white;
+    height: 20px;
+    width: 30px;
+}
+#listOrGrid{
+    width: 30px;
+    height:25px;
+}
+#listOrGrid>i{
+    color:white;
+    font-size: 30px;
+}
+.nav>i{
+    color:white;
+    font-size: 30px;
+}
