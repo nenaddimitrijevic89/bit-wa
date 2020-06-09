@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Header=()=>{
+const Post =({title})=>{
     return(
         <div>
-            <h2>Hacker News</h2>
+            <h2>{title}</h2>
         </div>
     )
 }
 
-export {Header};
+export {Post};
