@@ -1,0 +1,19 @@
+.searchBar{
+    margin-bottom: 15px;
+    display: flex;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.searchBar__icon{
+   font-size: 30px;
+   padding-right: 10px;
+}
+.searchBar__form{
+    width: 100%;
+}
+.searchBar__form_border{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-radius: 0px !important;
+}

@@ -1,12 +1,12 @@
 .footer {
     background-color: rgb(204, 32, 32);
-    height: 50px;
+    height: 70px;
     text-align: center;
     position: relative;
     bottom: -5px;
 }
 
 .footer__info {
-    padding-top: 15px;
+    padding-top: 27px;
     color: white;
 }

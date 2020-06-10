@@ -1,4 +1,3 @@
-
 const hideEmail = (input) => {
     let domain = "";
     let userName = "";
@@ -28,3 +27,5 @@ const hideEmail = (input) => {
 
 
 export { hideEmail }
+
+

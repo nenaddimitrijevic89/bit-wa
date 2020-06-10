@@ -6,11 +6,6 @@
     border-bottom: none;
 }
 
-.users__user:hover {
-    background-color: #cc2020;
-    color: white;
-}
-
 .users__user:last-child {
     border-bottom: 1px solid rgb(200, 199, 199);
 }
@@ -29,4 +24,7 @@
 
 .users__user_info span {
     font-weight: bold;
+}
+.female{
+    background-color: #ffebee ;
 }
