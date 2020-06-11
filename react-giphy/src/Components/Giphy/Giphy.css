@@ -1,3 +1,17 @@
-.giphy__img{
-    width: 250px;
+
+.giphy__button{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 320px;
+}
+.giphy:hover button{
+    background-color: black;
+    display: block;
+    color: white;
+    border: none;
+    opacity: 0.8;
+}
+.giphy{
+    margin-top: 20px;
 }

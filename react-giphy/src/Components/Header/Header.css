@@ -1,0 +1,8 @@
+.header{
+    background-color: rgb(94, 115, 235);
+    margin-bottom: 20px;
+    color: white;
+}
+.header__title{
+    padding-left: 100px;
+}

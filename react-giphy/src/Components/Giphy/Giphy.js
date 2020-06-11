@@ -1,15 +1,20 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
+import './Giphy.css';
 
-const Giphy = ({ src }) => {
-    return (
-        <Col lg={4}>
-            <Card>
-                <img className="giphy__img" src={src}>
-                </img>
-            </Card>
-        </Col>
-    )
+class Giphy extends React.Component {
+
+    render() {
+        return (
+            <Col lg={4}>
+                <Card className="giphy">
+                    <img className="giphy__img" src={this.props.src} />
+                    <button className="giphy__button" onClick={() => this.props.removeGiphy(this.props.id)} >x</button>
+                </Card>
+            </Col>
+        )
+    }
 }
+
 
 export { Giphy };
