@@ -12,11 +12,11 @@ const Header = ({ isList, onLayoutChange, updateUsers }) => {
                     <Col lg={{ span: 2, offset: 5 }} md={{ span: 6, offset: 3 }} sm={{ span: 4, offset: 3 }}>
                         <h2 className="header__title">Bit People</h2>
                     </Col>
-                    <Col lg={{ span: 2, offset: 3 }} md={{ span: 1, offset: 2 }} sm={{ span: 1, offset: 4 }}>
-                        <i className="fa fa-refresh header__icons" onClick={updateUsers}></i>
+                    <Col className="header__icons" lg={{ span: 2, offset: 3 }} md={{ span: 1, offset: 2 }} sm={{ span: 1, offset: 4 }}>
+                        <i className="fa fa-refresh header__icon" onClick={updateUsers}></i>
                         {isList
-                            ? <i className="fa fa-th-large header__icons" onClick={onLayoutChange}></i>
-                            : <i className="fa fa-list header__icons" onClick={onLayoutChange}></i>
+                            ? <i className="fa fa-th-large header__icon" onClick={onLayoutChange}></i>
+                            : <i className="fa fa-list header__icon" onClick={onLayoutChange}></i>
                         }
                     </Col>
                 </Row>

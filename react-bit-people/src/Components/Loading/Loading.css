@@ -1,13 +1,13 @@
 .sk-cube-grid {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
     margin: 100px auto;
   }
   
   .sk-cube-grid .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: #333;
+    background-color: rgb(204, 32, 32);
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
             animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
@@ -58,5 +58,9 @@
       -webkit-transform: scale3D(0, 0, 1);
               transform: scale3D(0, 0, 1);
     } 
+  }
+
+  .sticky{
+    height: 400px;
   }
   

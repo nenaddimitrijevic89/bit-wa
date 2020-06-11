@@ -5,7 +5,6 @@ import { Header } from './Components/Header/Header';
 import { Users } from './Components/Users/Users';
 import { Footer } from './Components/Footer/Footer';
 import { Search } from './Components/Search/Search';
-import { Loading } from './Components/Loading/Loading';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +16,8 @@ class App extends React.Component {
       users: [],
       filteredUsers: [],
       inputValue: "",
-      isLoading: false
+      isLoading: false,
+      timeAgo: ""
     }
   }
 
@@ -41,7 +41,7 @@ class App extends React.Component {
 
     fetchUsers()
       .then(data => {
-        this.setState({ users: data.results, filteredUsers: data.results, inputValue: '' },
+        this.setState({ users: data.results, filteredUsers: data.results, inputValue: '', timeAgo: new Date() },
           () => {
             localStorage.setItem("users", JSON.stringify(data.results))
           })
@@ -68,11 +68,12 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="wrapper">
         <Header isList={this.state.isListView} onLayoutChange={this.onLayoutChange} updateUsers={() => this.getUsers()} />
         <Search searchedUsers={this.searchedUsers} users={this.state.users} inputValue={this.state.inputValue} />
         <Users isList={this.state.isListView} users={this.state.filteredUsers} isLoading={this.state.isLoading} />
-        <Footer />
+        <div className="push"></div>
+        <Footer time={this.state.timeAgo} />
       </div >
     );
   }

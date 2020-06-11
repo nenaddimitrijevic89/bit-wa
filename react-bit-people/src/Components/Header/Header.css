@@ -8,9 +8,15 @@
     padding-top: 14px;
     text-align: center;
 }
-.header__icons{
-    font-size: 30px;
+.header__icon{
+    font-size: 25px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 25px;
+}
+.header__icons{
+    text-align: end;
+}
+.header__icon:first-child{
     padding-right: 30px;
 }
+

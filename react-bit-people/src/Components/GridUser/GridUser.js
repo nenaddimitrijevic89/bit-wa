@@ -11,7 +11,7 @@ const GridUser = ({ dob, img, name, email, gender }) => {
 
     return (
         <Col className="griduser" lg={4}>
-            <Card style={{ width: '' }}>
+            <Card style={{ width: '' }} className="a">
                 <Card.Img variant="top" src={img} alt={name} />
                 <Card.Body className={`${gender === "female" ? 'female' : ''}`}>
                     <Card.Title><h1 className="gridUsers__user_name">{name}</h1></Card.Title>
