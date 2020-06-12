@@ -1,17 +1,11 @@
 import React from 'react';
 import { Form, FormControl, Container, Row, Col } from 'react-bootstrap';
 import './Search.css';
-import { GenderCounter } from '../GenderCounter/GenderCounter';
-
 
 class Search extends React.Component {
 
-    counter = () => {
-
-    }
-
-    onSearch = (e) => {
-        this.props.searchedUsers(e.target.value)
+    onSearch = (event) => {
+        this.props.searchedUsers(event.target.value)
     }
 
     render() {
@@ -28,10 +22,8 @@ class Search extends React.Component {
                             </Form>
                         </span>
                     </Col>
-
                 </Row>
             </Container >
-
         )
     }
 }

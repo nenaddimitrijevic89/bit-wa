@@ -15,8 +15,8 @@ const GridUser = ({ dob, img, name, email, gender }) => {
                 <Card.Img variant="top" src={img} alt={name} />
                 <Card.Body className={`${gender === "female" ? 'female' : ''}`}>
                     <Card.Title><h1 className="gridUsers__user_name">{name}</h1></Card.Title>
-                    <Card.Title>{hideEmail(email)}</Card.Title>
-                    <Card.Title>date of birth:<span> {`${d}-${m}-${y}`}</span></Card.Title>
+                    <Card.Title><i className="fa fa-envelope"></i> {hideEmail(email)}</Card.Title>
+                    <Card.Title><i className="fa fa-birthday-cake"></i> date of birth:<span> {`${d}-${m}-${y}`}</span></Card.Title>
                 </Card.Body>
             </Card>
         </Col>

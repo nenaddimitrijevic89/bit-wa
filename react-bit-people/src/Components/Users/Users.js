@@ -22,7 +22,6 @@ class Users extends React.Component {
             <div>
                 <Container>
                     <Row>
-                        {console.log("users", this.props.users)}
                         <GenderCounter users={this.props.users} />
                     </Row>
                 </Container>
@@ -54,13 +53,10 @@ class Users extends React.Component {
                                     gender={user.gender}
                                 />
                             )
-
                         })}
                     </Row>
                 </Container>
             </div>
-
-
         )
     }
 }
