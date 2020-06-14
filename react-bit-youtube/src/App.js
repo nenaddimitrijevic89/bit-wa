@@ -12,8 +12,9 @@ class App extends React.Component {
     super();
     this.state = {
       videos: [],
-      activeVideo: null,
-      related: []
+      activeVideo: '',
+      related: [],
+      history: '',
     }
   }
 
@@ -25,7 +26,9 @@ class App extends React.Component {
   }
 
   renderVideos = () => {
-    const { videos } = this.state;
+    const { videos, history} = this.state;
+
+    console.log(history)
 
     if (videos && videos.length) {
       return this.state.videos.map(video => <MainVideo
@@ -37,7 +40,10 @@ class App extends React.Component {
   }
 
   filterVideos = (id) => {
+    this.setState({history: [...this.state.history, this.state.activeVideo]})
+    // this.setState({history: this.state.activeVideo})
     this.setState({ activeVideo: id, videos: [] })
+    
     fetchRelated(id)
       .then(data => {
         this.setState({ related: data.items })
@@ -68,6 +74,9 @@ class App extends React.Component {
           </Col>
         </Row>
         <Row>
+          {this.state.history
+          ? this.state.history.map(el=><Related id={el} filterVideos={this.filterVideos} />)
+          :<div></div>}
           {this.renderVideos()}
         </Row>
       </Container>
