@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import './Shows.css';
+import './Show.css';
+import { Link } from 'react-router-dom';
 
 const Show = props => {
     const { name, avatar } = props;

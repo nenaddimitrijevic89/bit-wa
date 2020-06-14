@@ -4,15 +4,18 @@ import { Header } from './Components/Header/Header';
 import { Title } from './Components/Title/Title';
 import { Footer } from './Components/Footer/Footer';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Title />
-      <Shows />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <Title />
+        <Shows />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

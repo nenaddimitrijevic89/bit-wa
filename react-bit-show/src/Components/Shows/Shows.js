@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Show } from './Show';
-// import './Shows.css';
+import { Show } from '../Show/Show';
 import { Container, Row } from 'react-bootstrap';
 
 class Shows extends Component {
