@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 
-const Related = ({ image, name, filterVideos, id }) => {
-    return (
 
+const History = ({ image, name, filterVideos, id }) => {
+    return (
         <Col lg={4}>
             <Card style={{ width: '18rem' }} onClick={() => filterVideos(id)}>
                 <Card.Img variant="top" src={image} />
@@ -12,8 +12,7 @@ const Related = ({ image, name, filterVideos, id }) => {
                 </Card.Body>
             </Card>
         </Col>
-
     )
 }
 
-export { Related };
+export { History };
