@@ -7,6 +7,7 @@ import { Posts } from './Components/Posts/Posts';
 import { About } from './Components/About/About';
 import { Switch, Route } from 'react-router-dom';
 import { Authors } from './Components/Authors/Authors';
+import {SinglePost} from './Components/Post/SinglePost';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path='/Posts' component={Posts} />
       <Route path='/Authors' component={Authors} />
       <Route path='/About' component={About} />
+      <Route path='/Posts/100' component={SinglePost}/>
     </Switch>
   );
 }

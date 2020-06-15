@@ -1,4 +1,5 @@
 import React from 'react';
+import { matchPath, useRouteMatch } from 'react-router';
 
 class SinglePost extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class SinglePost extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props.id)
         fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.id}`)
             .then(response => response.json())
             .then(data => {

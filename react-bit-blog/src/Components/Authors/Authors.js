@@ -3,6 +3,7 @@ import './Authors.css';
 import { Header } from '../Header/Header';
 import { Author } from '../Author/Author';
 import { Container } from 'react-materialize';
+import { Foot } from '../Footer/Footer';
 
 class Authors extends React.Component {
     constructor() {
@@ -24,8 +25,12 @@ class Authors extends React.Component {
                 <Header />
                 <Container>
                     <h2 className="authors__title">Authors</h2>
-                    {this.state.users.map(user => <Author name={user.name} website={user.website} />)}
+                    {this.state.users.map(user => 
+                    <Author 
+                    name={user.name} 
+                    website={user.website} />)}
                 </Container>
+                <Foot/>
             </div>
         )
     }

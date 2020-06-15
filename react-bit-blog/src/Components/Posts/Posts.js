@@ -1,10 +1,10 @@
 import React from 'react';
 import './Posts.css';
 import { Header } from '../Header/Header';
-import { Container } from 'react-materialize';
+import { Container} from 'react-materialize';
 import { Post } from '../Post/Post';
-import { Route, Link } from 'react-router-dom';
-import { SinglePost } from '../Post/SinglePost';
+import {Foot} from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 
 class Posts extends React.Component {
     constructor(props) {
@@ -28,11 +28,12 @@ class Posts extends React.Component {
                 <Container>
                     <h2 className="posts__title">Posts</h2>
                     {this.state.posts.map(post =>
-                        <Route to={`/Posts/${post.id}`} component={SinglePost}>
-                            <Link><Post title={`Post ${post.id}`} body={`${post.body.slice(0, 50)}. . .`} key={post.id} /></Link>
-                        </Route>
+                           <Link to={`/Posts/${post.id}`}> <Post title={`Post ${post.id}`}
+                            body={`${post.body.slice(0, 200)}. . .`} 
+                            key={post.id} /></Link>
                     )}
                 </Container>
+                <Foot/>
             </div >
         )
     }
