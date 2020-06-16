@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Card, Icon, CardTitle } from 'react-materialize';
 import unnamed from '../../../Images/unnamed.png';
+import { Link } from "react-router-dom";
 
 const AuthorInfo = ({ name, id, username, email, phone, website }) => {
     return (
@@ -9,6 +10,7 @@ const AuthorInfo = ({ name, id, username, email, phone, website }) => {
                 m={8} offset="m2"
                 s={12}
             >
+                <Link className="singleAuthor__back" to="/authors">Back</Link>
                 <Card className="singleAuthor__card"
                     closeIcon={<Icon>close</Icon>}
                     header={<CardTitle image={unnamed} />}

@@ -8,7 +8,7 @@ const Header = () => {
         <Container className="header">
             <Navbar
                 alignLinks="right"
-                brand={<a className="brand-logo" href="#">BIT BLOG</a>}
+                brand={<Link to="/">BIT BLOG</Link>}
                 centerChildren
                 id="mobile-nav"
                 menuIcon={<Icon>menu</Icon>}
@@ -25,16 +25,16 @@ const Header = () => {
                     preventScrolling: true
                 }}
             >
-                <Link to='/'> <NavItem href="">
+                <Link to='/'> <NavItem>
                     Home
                 </NavItem> </Link>
-                <Link to='/Posts'> <NavItem href="">
+                <Link to='/Posts'> <NavItem>
                     Posts
                 </NavItem> </Link>
-                <Link to='/Authors'> <NavItem href="">
+                <Link to='/Authors'> <NavItem>
                     Authors
                 </NavItem> </Link>
-                <Link to='/About'> <NavItem href="">
+                <Link to='/About'> <NavItem>
                     About
                 </NavItem> </Link>
             </Navbar>

@@ -4,6 +4,8 @@ import { Container } from 'react-materialize';
 import './Authors.css'
 import { AuthorInfo } from './AuthorComponents/AuthorInfo';
 import { AuthorAddress } from './AuthorComponents/AuthorAddress';
+import { Header } from '../Header/Header';
+import { Link } from 'react-router-dom';
 
 class SingleAuthor extends React.Component {
     constructor(props) {
@@ -17,7 +19,7 @@ class SingleAuthor extends React.Component {
             .then(data => {
                 this.setState({ singleAuthor: data })
             })
-            
+
     }
 
     renderInfo = () => (
@@ -45,10 +47,13 @@ class SingleAuthor extends React.Component {
 
     render() {
         return (
-            <Container>
-                <h4 className="singleAuthor__title">SINGLE AUTHOR</h4>
-                {this.state.singleAuthor && this.renderInfo()}
-            </Container>
+            <div>
+                <Header />
+                <Container>
+                    <h4 className="singleAuthor__title">SINGLE AUTHOR</h4>
+                    {this.state.singleAuthor && this.renderInfo()}
+                </Container>
+            </div>
         )
     }
 
