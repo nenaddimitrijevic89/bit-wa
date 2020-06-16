@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 const AuthorInfo = ({ name, id, username, email, phone, website }) => {
     return (
         <Row>
-            <Col
-                m={8} offset="m2"
-                s={12}
-            >
-                <Link className="singleAuthor__back" to="/authors">Back</Link>
-                <Card className="singleAuthor__card"
+            <Col m={8} offset="m2" s={12}>
+                <Link className="singleAuthor__back" to="/authors"><i class="fa fa-arrow-left"></i> Back</Link>
+                <Card className="singleAuthor__card blue-grey darken-1"
+                    textClassName="white-text"
                     closeIcon={<Icon>close</Icon>}
                     header={<CardTitle image={unnamed} />}
                     horizontal

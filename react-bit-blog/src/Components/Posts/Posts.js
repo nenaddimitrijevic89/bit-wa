@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from '../Header/Header';
 import { fetchPosts } from '../../Data/fetch';
 import { Post } from './Post';
-import { SinglePost } from './SinglePost';
 import './Posts.css'
 import { Container } from 'react-materialize';
 import { Link } from 'react-router-dom';
@@ -22,7 +21,6 @@ class Posts extends React.Component {
                 this.setState({ posts: data.slice(0, 20) })
             })
     }
-
 
     render() {
         return (

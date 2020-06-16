@@ -19,7 +19,6 @@ class Home extends React.Component {
 
     submitHandler(event) {
         event.preventDefault()
-        console.log(this.state)
 
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
@@ -33,8 +32,6 @@ class Home extends React.Component {
         })
             .then(response => response.json())
             .then(data => console.log(data))
-
-
     }
 
     changeHandler(event) {
@@ -44,13 +41,11 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-
                 <Header />
-
                 <Container>
                     <h4 className="home__title">NEW POST</h4>
                     <form>
-                        <h6> Title</h6>
+                        <h6>Title</h6>
                         <TextInput
                             type="text"
                             name="title"
@@ -75,7 +70,7 @@ class Home extends React.Component {
                             waves="light"
                         >
                             Cancel
-                    </Button>
+                        </Button>
                         <Button
                             onClick={this.submitHandler}
                             type="submit"

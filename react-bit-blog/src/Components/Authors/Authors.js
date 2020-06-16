@@ -30,7 +30,9 @@ class Authors extends React.Component {
                 <Container>
                     <h4 className="authors__title">AUTHORS</h4>
                     {this.state.authors.map(author =>
-                        <Link to={`/authors/singleauthor/${author.id}`}><Author name={author.name} id={author.id} /></Link>
+                        <Link to={`/authors/singleauthor/${author.id}`}>
+                            <Author name={author.name} id={author.id} />
+                        </Link>
 
                     )}
                 </Container>

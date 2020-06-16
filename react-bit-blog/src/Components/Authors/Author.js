@@ -18,10 +18,7 @@ class Author extends React.Component {
   render() {
     return (
       <Row>
-        <Col
-          m={12}
-          s={12}
-        >
+        <Col m={12} s={12}>
           <Collection>
             <CollectionItem >
               {`${this.props.name} (${this.state.posts.length})`}

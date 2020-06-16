@@ -31,9 +31,9 @@ class SinglePost extends React.Component {
             <div>
                 <Header />
                 <Container>
-                    <Link to="/posts"><h6 className="singlePost__back" >Back</h6></Link>
+                    <Link to="/posts"><h6 className="singlePost__back"><i class="fa fa-arrow-left"></i> Back</h6></Link>
                     <h4 className="singlePost__title">SINGLE POST</h4>
-                    <Link to={`/authors/singleauthor/${this.state.singlePost.userId}`}><h5 className="singlePost__link">Author</h5></Link>
+                    <Link to={`/authors/singleauthor/${this.state.singlePost.userId}`}><h5 className="singlePost__link"><i class="fa fa-user"></i> Author</h5></Link>
                     <Row>
                         <Col
                             m={12}
@@ -52,12 +52,12 @@ class SinglePost extends React.Component {
                             </Card>
                         </Col>
                     </Row>
-                    <h5>3 more posts from same author</h5>
+                    <h5><i class="fa fa-arrow-down"></i> more posts from same author</h5>
                     {this.state.authorPosts.slice(0, 3).map(post =>
-                        <Post
+                        <Link to={`/posts/singlepost/${post.id}`}><Post
                             id={post.id}
                             title={post.title}
-                        />
+                        /></Link>
                     )}
 
                 </Container>

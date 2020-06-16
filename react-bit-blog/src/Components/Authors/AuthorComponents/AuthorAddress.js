@@ -1,14 +1,12 @@
 import React from 'react';
-import { Row, Col, Card, CardTitle, Icon } from 'react-materialize';
+import { Row, Col, Card} from 'react-materialize';
 
 const AuthorAddress = ({ street, city, zipcode, lat, lng }) => {
     return (
         <Row>
-            <Col
-                m={8} offset="m2"
-                s={12}
-            >
-                <Card>
+            <Col m={8} offset="m2" s={12}>
+                <Card className="blue-grey darken-1"
+                textClassName="white-text">
                     <h5>ADDRESS</h5>
                     <h6>{`street: ${street}`}</h6>
                     <h6>{`city: ${city}`}</h6>
@@ -22,7 +20,7 @@ const AuthorAddress = ({ street, city, zipcode, lat, lng }) => {
                         title={street}
                         frameBorder="0"
                         style={{ border: 0 }}
-                        src={`https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`}
+                        src={`https://maps.google.com/maps?q=${lat},${lng}&z=5&output=embed`}
                     />
                 </Card>
             </Col>
