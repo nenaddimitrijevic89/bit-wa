@@ -3,20 +3,22 @@ import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize';
 import { Home } from './Components/Home/Home';
-import { Posts } from './Components/Posts/Posts';
-import { About } from './Components/About/About';
-import { Switch, Route } from 'react-router-dom';
 import { Authors } from './Components/Authors/Authors';
-import {SinglePost} from './Components/Post/SinglePost';
+import { About } from './Components/About/About';
+import { Posts } from './Components/Posts/Posts';
+import { SinglePost } from './Components/Posts/SinglePost';
+import { SingleAuthor } from './Components/Authors/SingleAuthor';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/Posts' component={Posts} />
-      <Route path='/Authors' component={Authors} />
-      <Route path='/About' component={About} />
-      <Route path='/Posts/100' component={SinglePost}/>
+      <Route exact path='/posts' component={Posts} />
+      <Route exact path='/authors' component={Authors} />
+      <Route path='/about' component={About} />
+      <Route path='/posts/singlepost/:id' component={SinglePost} />
+      <Route path='/authors/singleauthor/:id' component={SingleAuthor} />
     </Switch>
   );
 }

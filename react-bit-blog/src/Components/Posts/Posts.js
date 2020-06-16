@@ -1,43 +1,47 @@
 import React from 'react';
-import './Posts.css';
 import { Header } from '../Header/Header';
-import { Container} from 'react-materialize';
-import { Post } from '../Post/Post';
-import {Foot} from '../Footer/Footer';
+import { fetchPosts } from '../../Data/fetch';
+import { Post } from './Post';
+import { SinglePost } from './SinglePost';
+import './Posts.css'
+import { Container } from 'react-materialize';
 import { Link } from 'react-router-dom';
+
 
 class Posts extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             posts: []
         }
     }
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.json())
+        fetchPosts()
             .then(data => {
-                this.setState({ posts: data })
+                this.setState({ posts: data.slice(0, 20) })
             })
     }
 
+
     render() {
         return (
-            <div>
+            <div className="posts">
                 <Header />
+                <h4 className="posts__title">POSTS</h4>
                 <Container>
-                    <h2 className="posts__title">Posts</h2>
                     {this.state.posts.map(post =>
-                           <Link to={`/Posts/${post.id}`}> <Post title={`Post ${post.id}`}
-                            body={`${post.body.slice(0, 200)}. . .`} 
-                            key={post.id} /></Link>
+                        <Link to={`/posts/singlepost/${post.id}`}>
+                            <Post
+                                key={post.id}
+                                id={post.id}
+                                title={post.title}
+                            />
+                        </Link>
                     )}
                 </Container>
-                <Foot/>
-            </div >
+            </div>
         )
     }
-
 }
-
 export { Posts };

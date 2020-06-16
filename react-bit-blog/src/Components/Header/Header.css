@@ -1,7 +1,4 @@
-.nav{
+.header{
     width: 100%;
-    max-width: initial;
-}
-.brand-logo{
-    padding-left: 50px;
+    max-width:initial;
 }

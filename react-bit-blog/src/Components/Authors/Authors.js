@@ -1,39 +1,42 @@
 import React from 'react';
-import './Authors.css';
 import { Header } from '../Header/Header';
-import { Author } from '../Author/Author';
+import { fetchAuthors } from '../../Data/fetch';
+import { Author } from './Author';
 import { Container } from 'react-materialize';
-import { Foot } from '../Footer/Footer';
+import './Authors.css';
+import { Link } from 'react-router-dom';
 
 class Authors extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+
         this.state = {
-            users: []
+            authors: []
         }
     }
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
+        fetchAuthors()
             .then(data => {
-                this.setState({ users: data })
+                this.setState({ authors: data })
             })
     }
+
+
+
     render() {
         return (
             <div>
                 <Header />
                 <Container>
-                    <h2 className="authors__title">Authors</h2>
-                    {this.state.users.map(user => 
-                    <Author 
-                    name={user.name} 
-                    website={user.website} />)}
+                    <h4 className="authors__title">AUTHORS</h4>
+                    {this.state.authors.map(author =>
+                        <Link to={`/authors/singleauthor/${author.id}`}><Author name={author.name} id={author.id} /></Link>
+
+                    )}
                 </Container>
-                <Foot/>
             </div>
+
         )
     }
 }
-
-export { Authors }
+export { Authors };

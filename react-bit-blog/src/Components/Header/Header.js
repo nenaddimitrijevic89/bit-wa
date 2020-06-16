@@ -1,19 +1,21 @@
 import React from 'react';
-import './Header.css';
+import { Container, Navbar, NavItem, Icon } from 'react-materialize';
 import { Link } from 'react-router-dom';
-import { Navbar, NavItem, Icon, Container } from 'react-materialize';
+import './Header.css';
 
 const Header = () => {
     return (
-        <Container className="nav">
+        <Container className="header">
             <Navbar
                 alignLinks="right"
-                brand={<a className="brand-logo" href="#">Logo</a>}
+                brand={<a className="brand-logo" href="#">BIT BLOG</a>}
+                centerChildren
                 id="mobile-nav"
-                menuIcon={<Icon>Bit Blog</Icon>}
+                menuIcon={<Icon>menu</Icon>}
+
                 options={{
                     draggable: true,
-                    edge: 'center',
+                    edge: 'right',
                     inDuration: 250,
                     onCloseEnd: null,
                     onCloseStart: null,
@@ -23,13 +25,21 @@ const Header = () => {
                     preventScrolling: true
                 }}
             >
-                <Link to='/'><NavItem>Home</NavItem></Link>
-                <Link to='/Posts'><NavItem>Posts</NavItem></Link>
-                <Link to='/Authors'><NavItem>Authors</NavItem></Link>
-                <Link to='/About'><NavItem>About</NavItem></Link>
+                <Link to='/'> <NavItem href="">
+                    Home
+                </NavItem> </Link>
+                <Link to='/Posts'> <NavItem href="">
+                    Posts
+                </NavItem> </Link>
+                <Link to='/Authors'> <NavItem href="">
+                    Authors
+                </NavItem> </Link>
+                <Link to='/About'> <NavItem href="">
+                    About
+                </NavItem> </Link>
             </Navbar>
         </Container>
-    )
+    );
 }
 
 export { Header };
